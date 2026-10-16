@@ -1,0 +1,27 @@
+*{box-sizing:border-box}
+body{margin:0;padding:20px;font-family:Arial,sans-serif;color:#fff;background:linear-gradient(135deg,#10213e,#146b85);min-height:100vh}
+.container{max-width:950px;margin:auto}
+header{text-align:center;padding:15px 0}
+header h1{font-size:clamp(26px,5vw,38px);margin:5px}
+header p{color:#d9eaf7}
+.card{background:#ffffff14;border:1px solid #ffffff25;border-radius:20px;padding:22px;margin:18px 0;backdrop-filter:blur(10px)}
+.search{display:flex;gap:10px}
+input,button,select{font:inherit;padding:13px;border:0;border-radius:10px}
+input{min-width:0;flex:1}
+button{background:#ffd166;color:#182a40;font-weight:bold;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+select{background:white;color:#182a40}
+.main-weather{text-align:center}
+#weatherIcon{font-size:68px}
+#temperature{font-size:58px;font-weight:bold;margin:8px}
+#description{text-transform:capitalize}
+.details,.forecast{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:12px}
+.detail,.day{padding:15px;background:#ffffff12;border-radius:14px;text-align:center;overflow-wrap:anywhere}
+.detail strong{display:block;margin-top:8px}
+.day-icon{font-size:30px;margin:12px 0}
+.small{color:#d6e6f2}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.favorite{display:flex;gap:8px;align-items:center;margin:10px 0}
+.favorite button:first-child{flex:1}
+#error{color:#ffe08a;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:450px){body{padding:12px}.card{padding:15px}.search{gap:6px}.search input,.search button{padding:11px;font-size:14px}#temperature{font-size:48px}}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Climate Weather Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<header>
+<h1>🌦️ Climate Dashboard</h1>
+<p>Current weather, 5-day forecast and favorite cities</p>
+</header>
+
+<div class="search">
+<input id="cityInput" value="Ahmedabad" placeholder="Enter city name" aria-label="City name">
+<button id="searchBtn">Search</button>
+</div>
+
+<div class="row" style="margin-top:15px">
+<span id="status" class="small">Ready to check weather</span>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<select id="units" aria-label="Temperature units">
+<option value="metric">Celsius °C</option>
+<option value="imperial">Fahrenheit °F</option>
+</select>
+<button id="saveBtn">☆ Save city</button>
+</div>
+</div>
+
+<div class="card main-weather">
+<h2 id="cityName">Weather Dashboard</h2>
+<div id="weatherIcon">🌤️</div>
+<div id="temperature">--°</div>
+<h3 id="description">Search for a city</h3>
+<p id="feelsLike" class="small"></p>
+</div>
+
+<div class="card">
+<h2>Current Conditions</h2>
+<div class="details">
+<div class="detail">💧 Humidity<strong id="humidity">--</strong></div>
+<div class="detail">💨 Wind<strong id="wind">--</strong></div>
+<div class="detail">🌡️ Pressure<strong id="pressure">--</strong></div>
+<div class="detail">👁️ Visibility<strong id="visibility">--</strong></div>
+</div>
+</div>
+
+<div class="card">
+<h2>📅 5-Day Forecast</h2>
+<div id="forecast" class="forecast">Forecast will appear here.</div>
+</div>
+
+<div class="card">
+<h2>⭐ Favorite Cities</h2>
+<div id="favorites">No favorite cities yet.</div>
+</div>
+
+<p id="error" role="alert"></p>
+<p class="small" style="text-align:center">Weather information powered by OpenWeatherMap</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
